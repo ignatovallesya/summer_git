@@ -1,4 +1,4 @@
-#4.2
+# 4.2
 def find_p(mes):
     answer = []
     for i in range(len(mes)):
