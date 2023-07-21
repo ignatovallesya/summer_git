@@ -1,4 +1,5 @@
 # 3.1
-n = [3, 24, 31, 4, 9, 10]
-average = lambda num_list: sum(num_list) / len(num_list)
-print(average(n))
+arr = [1, 2, 3, 4, 5]
+mean = lambda x: sum(x) / len(x)
+
+print(mean(arr))
