@@ -1,4 +1,4 @@
-#1.5
+# 1.5
 points = int(input("Введите количество очков команды: "))
 
 if points == 3:
@@ -7,3 +7,4 @@ elif points == 0:
     result = "проигрыш"
 else:
     result = "ничья"
+    
