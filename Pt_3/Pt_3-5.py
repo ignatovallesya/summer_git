@@ -1,16 +1,13 @@
-#3.5
-# Определяем функцию для проверки числа на простоту
-def is_prime(number):
-    if number < 2:
-        return False
-    for i in range(2, int(number**0.5) + 1):
-        if number % i == 0:
-            return False
-    return True
+# 3.5
+def not_prime(x):
+    if x <= 1:
+        return True
+    for i in range(2, int(x**0.5) + 1):
+        if x % i == 0:
+            return True
+    return False
 
-# Используем list comprehension для создания списка чисел, которые не являются простыми
-not_prime_numbers = [number for number in range(1, 51) if not is_prime(number)]
 
-# Выводим полученный список на экран
-print("Список чисел, которые не являются простыми:")
-print(not_prime_numbers)
+n = int(input("Введите число N: "))
+arr = [i for i in range(n) if not_prime(i)]
+print("Не простые числа от 0 до N", arr)
