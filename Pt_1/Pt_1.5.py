@@ -7,4 +7,3 @@ elif points == 0:
     result = "проигрыш"
 else:
     result = "ничья"
-    
