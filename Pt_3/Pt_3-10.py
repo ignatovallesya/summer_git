@@ -1,4 +1,4 @@
-#3.10
+# 3.10
 # Задаем строку
 text = "Hello, how are you today?"
 
