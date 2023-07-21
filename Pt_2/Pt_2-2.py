@@ -1,20 +1,15 @@
-#2.2
-# Создаем список с названиями телевизионных передач
-tv_shows = ["Первая передача", "Вторая передача", "Третья передача", "Четвертая передача"]
+# 2.2
+def print_programs(programs):
+    print("Программы: ")
+    for p in programs:
+        print(p)
 
-# Выводим список передач на отдельных строках
-print("Список передач:")
-for show in tv_shows:
-    print(show)
 
-# Пользователь вводит название новой передачи и позицию для вставки
-new_show = input("Введите название новой передачи: ")
-position = int(input("Введите позицию для вставки (от 1 до {}): ".format(len(tv_shows) + 1)))
+tv_programs = ["Новости", "Фильмы", "Музыка", "Спорт"]
+print_programs(tv_programs)
 
-# Вставляем новую передачу в список
-tv_shows.insert(position - 1, new_show)
+new_program = input("Введите название новой программы: ")
+position = int(input("Введите номер позиции: "))
 
-# Выводим обновленный список передач
-print("Обновленный список передач:")
-for show in tv_shows:
-    print(show)
+tv_programs.insert(position - 1, new_program)
+print_programs(tv_programs)
