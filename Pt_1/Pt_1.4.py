@@ -1,4 +1,4 @@
-#1.4
+# 1.4
 while True:
     number = int(input("Введите число от 10 до 20: "))
 
@@ -9,3 +9,4 @@ while True:
     else:
         print("Спасибо.")
         break
+        
