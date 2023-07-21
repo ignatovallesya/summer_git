@@ -1,14 +1,4 @@
-#3.1
-# Создаем lambda-функцию с аргументом nums для списка чисел
-average = lambda nums: sum(nums) / len(nums)
-
-# Пример использования:
-
-# Создаем список чисел
-numbers = [1, 2, 3, 4, 5]
-
-# Вызываем lambda-функцию и сохраняем результат в переменную
-result = average(numbers)
-
-# Выводим результат на экран
-print("Среднее значение списка чисел:", result)
+# 3.1
+n = [3, 24, 31, 4, 9, 10]
+average = lambda num_list: sum(num_list) / len(num_list)
+print(average(n))
