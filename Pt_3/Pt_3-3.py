@@ -1,12 +1,5 @@
-#3.3
-# Lambda-функция для проверки четности числа
-is_even = lambda x: x % 2 == 0
-
-# Ввод числа с клавиатуры
+# 3.3
 number = int(input("Введите число: "))
+even = lambda x: "Четное" if x % 2 == 0 else "Нечетное"
 
-# Проверка четности числа и вывод результата
-if is_even(number):
-    print("Число", number, "является четным.")
-else:
-    print("Число", number, "является нечетным.")
+print(even(number))
