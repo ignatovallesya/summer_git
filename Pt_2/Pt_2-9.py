@@ -1,10 +1,10 @@
-#2.9
+# 2.9
 def find_max_digit(number):
     max_index = 0
-    max_digit = int(number[0])
+    max_digit = int(number[ 0 ])
 
     # Находим индекс и значение максимальной цифры
-    for i in range(1, len(number)):
+    for i in range( 1 , len(number)):
         digit = int(number[i])
         if digit > max_digit:
             max_digit = digit
