@@ -1,43 +1,28 @@
-#4.5
-def find_paths(graph, start, end, path=[]):
-    # Добавляем текущую вершину в путь
-    path = path + [start]
-
-    # Если текущая вершина является конечной, добавляем путь в список путей
-    if start == end:
-        return [path]
-
-    # Если текущая вершина не существует в графе, возвращаем пустой список путей
-    if start not in graph:
-        return []
-
-    # Инициализируем список путей
-    paths = []
-
-    # Для каждой смежной вершины вызываем функцию рекурсивно
-    for vertex in graph[start]:
-        new_paths = find_paths(graph, vertex, end, path)
-        paths.extend(new_paths)
-
-    return paths
-
-# Заданный граф
+# 4.5
 graph = {
- 'A': ['B', 'C'],
- 'B': ['D', 'E'],
- 'C': ['F'],
- 'D': [],
- 'E': ['F'],
- 'F': []
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
 }
-
-# Заданные начальная и конечная вершины
 start = 'A'
 end = 'F'
 
-# Находим все пути от заданной вершины до заданной вершины
-paths = find_paths(graph, start, end)
 
-# Выводим результат
-for path in paths:
-    print(' -> '.join(path))
+def find_path(graph, start, end, parents):
+    if end in graph[start]:
+        parents += [end]
+        print(" - ".join(parents))
+        parents.clear()
+        return
+    elif len(graph[start]) == 0:
+        return
+    else:
+        neighbors = graph[start]
+        for n in neighbors:
+            find_path(graph, n, end, parents + [n])
+
+
+find_path(graph, start, end, [start])
