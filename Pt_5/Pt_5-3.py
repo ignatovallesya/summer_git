@@ -25,7 +25,7 @@ def search_books(books, start_year, end_year):
     else:
         print("Найдены книги в промежутке времени", start_year, "-", end_year)
         for book in found_books:
-            print("Название:", book['Title'], "Автор:", book['Author'], "Год издания:", book['Year'])
+            print("Наз:", book['Title'], "Авт:", book['Author'], "Год:", book['Year'])
 
 
 # Загрузка данных из файла books.csv
