@@ -1,20 +1,14 @@
 #4.2
-# Задаем строку
-string = "Hello, level radar racecar madam"
+def find_p(mes):
+    answer = []
+    for i in range(len(mes)):
+        for j in range(i + 1, len(mes) + 1):
+            subst = mes[i:j]
+            if subst == subst[::-1] and len(subst) > 1:
+                answer.append(subst)
+    return answer
 
-# Функция для проверки, является ли строка палиндромом
-def is_palindrome(s):
-    return s == s[::-1]
 
-# Создаем пустой список для хранения палиндромов
-palindromes = []
-
-# Используем два вложенных цикла для создания всех возможных подстрок
-for i in range(len(string)):
-    for j in range(i + 1, len(string) + 1):
-        # Проверяем, является ли подстрока палиндромом и добавляем в список, если да
-        if is_palindrome(string[i:j]):
-            palindromes.append(string[i:j])
-
-# Выводим список палиндромов на экран
-print(palindromes)
+st = input("Строка: ")
+palind = find_p(st)
+print("Палиндромы:", palind)
