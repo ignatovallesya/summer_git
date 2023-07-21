@@ -1,5 +1,4 @@
-#4.6
-# Функция для шифрования текста шифром Цезаря
+# 4.6
 def caesar_cipher(text, shift):
     encrypted_text = ''
 
@@ -16,14 +15,10 @@ def caesar_cipher(text, shift):
     return encrypted_text
 
 
-# Получаем строку для шифрования от пользователя
 text = input("Введите текст для шифрования: ")
 
-# Получаем сдвиг от пользователя
 shift = int(input("Введите сдвиг: "))
 
-# Вызываем функцию для шифрования текста
 encrypted_text = caesar_cipher(text, shift)
 
-# Выводим зашифрованный текст
 print("Зашифрованный текст: ", encrypted_text)
