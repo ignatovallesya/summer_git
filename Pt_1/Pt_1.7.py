@@ -1,4 +1,4 @@
-#1.7
+# 1.7
 def toggle_case(input_string):
     toggled_string = ""
     for char in input_string:
