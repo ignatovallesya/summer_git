@@ -19,7 +19,7 @@ while True:
             print("Отлично!")
             break
         else:
-            hint = program_color[0] + ("*" * (len(program_color)-1))
+            hint = program_color[0] + (" * " * (len(program_color)-1))
             print("Не угадали! Но вот намек:", hint)
             print("Попробуйте еще раз.")
 
